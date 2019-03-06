@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>商品后台管理系统</title>
+		<link rel="stylesheet" href="css/layui.css">
+	</head>
+
+	<body class="layui-layout-body">
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header">
+				<div class="layui-logo">商品后台管理系统</div>
+				<!-- 头部区域（可配合layui已有的水平导航） -->
+
+				<ul class="layui-nav layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<img src="images/1.gif" class="layui-nav-img"> 管理员
+						</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="">主页</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<div id="logout">退出登陆</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="layui-side layui-bg-black">
+				<div class="layui-side-scroll">
+					<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+					<ul class="layui-nav layui-nav-tree" lay-filter="test">
+						<li class="layui-nav-item layui-nav-itemed">
+							<a class="" href="javascript:;">菜单栏</a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="product.html" target="right">库存商品总览</a>
+								</dd>
+								<dd>
+									<a href="newsType.html" target="right">商品管理</a>
+								</dd>
+								<dd>
+									<a href="news.html" target="right">分销管理</a>
+								</dd>
+								<dd>
+									<a href="link.html" target="right">代理商管理</a>
+								</dd>
+								<dd>
+									<a href="javascript:void(0)"  onclick="updatePwd('修改密码',1)">修改密码</a>
+								</dd>
+							</dl>
+						</li>						
+					</ul>
+				</div>
+			</div>
+
+			<div class="layui-body" style="z-index: 0;">
+				<!-- 内容主体区域 -->
+				<div style="padding: 15px;">
+					<iframe src="product.html" name="right" frameborder="0" width="100%" height="1200"></iframe>
+
+				</div>
+			</div>
+			<div class="layui-footer">
+				<!-- 底部固定区域 -->
+				底部固定区域
+			</div>
+		</div>
+		<script type="text/javascript" src="/static/234/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="/static/234/myplugs/js/plugs.js">
+		</script>
+		<script type="text/javascript">
+			//添加编辑弹出层
+			function updatePwd(title, id) {
+				$.jq_Panel({
+					title: title,
+					iframeWidth: 500,
+					iframeHeight: 300,
+					url: "updatePwd.html"
+				});
+			}
+		</script>
+		<script src="/static/234/js/layui.js"></script>
+		<script>
+			//JavaScript代码区域
+			layui.use('element', function() {
+				var element = layui.element;
+			});
+		</script>
+        <script>
+            $("#logout").click(function(){
+                var command = confirm("请确认是否登出");
+                if(command) {
+                    window.location.href = "/home/";
+                }
+            });
+        </script>
+	</body>
+</html>

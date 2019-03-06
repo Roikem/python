@@ -1,0 +1,85 @@
+*{
+    font-size: 20px;
+}
+
+#close a {
+    text-decoration: none;
+    color: #eee;
+    display: block;
+    font-size: 20px
+}
+
+.button {
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.callout_button {
+    background: #FF5B5B;
+    margin: 0 auto;
+}
+
+.callout_button:hover {
+    background: red;
+}
+
+.close_button {
+    background: #363636;
+    margin: 0 auto;
+}
+
+.close_button:hover {
+    background: black;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0.4;
+    z-index: 8000;
+    display: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.dialog {
+    width: 900px;
+    background: #fff;
+    position: absolute;
+    z-index: 9000;
+    padding-bottom: 10px;
+    display: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.dialog_head {
+    width: 100%;
+    height: 50px;
+    background: #4B4B4B;
+    text-align: center;
+    line-height: 50px;
+    color: #eee;
+    cursor: move;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.dialog_content {
+    width: 100%;
+    height: 580px;
+}
+
+
+.element_information {
+    font-size: 30px;
+}

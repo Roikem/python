@@ -1,0 +1,181 @@
+/*----表单----*/
+
+#login_frame {
+  width: 400px;
+  height: 260px;
+  padding: 13px;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+
+  background-color: rgba(240, 255, 255, 0.15);
+
+  border-radius: 10px;
+  text-align: center;
+}
+
+form p > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#image_logo {
+  margin-top: 22px;
+}
+
+.label_input {
+  font-size: 14px;
+  font-family: 宋体;
+
+  width: 65px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+
+  color: white;
+  background-color: rgb(126, 227, 252);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.text_field {
+  width: 278px;
+  height: 28px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 0;
+}
+
+#btn_login {
+  font-size: 14px;
+  font-family: 宋体;
+  width: 120px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  color: white;
+  background-color: rgb(126, 227, 252);
+  border-radius: 6px;
+  border: 0;
+  float: left;
+  cursor: pointer;
+}
+
+#forget_pwd {
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  float: right;
+  top: 5px;
+
+}
+
+#forget_pwd:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+#login_control {
+  padding: 0 28px;
+}
+
+img{
+  width:40px;
+  height:40px;
+}
+
+#login>*{
+    position:absolute;
+}
+
+#login #login_frame{
+  animation-name: _login_frame;
+  animation-duration: 1.2s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.42, 0.54, 0.49, 1.74);
+  animation-delay: 2s;
+}
+
+@keyframes _login_frame{
+  from{
+    left:0%;
+    opacity:0;
+  }
+  to{
+    left:50%;
+    opacity: 1;
+  }
+}
+
+/*-----------*/
+
+/*----按钮---*/
+.toggle {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	width: 150px;
+	height: 60px;
+	color: white;
+	outline: 0;
+	text-decoration: none;
+	border-radius: 100px;
+	border: 2px solid #546E7A;
+	background-color: #263238;
+	-webkit-transition: all 500ms;
+	-moz-transition: all 500ms;
+	-o-transition: all 500ms;
+	transition: all 500ms;
+}
+.toggle:active {background-color: #1c2429;}
+.toggle:hover:not(.toggle--moving):after {background-color: #455A64;}
+.toggle:after {
+	display: block;
+	position: absolute;
+	top: 4px;
+	bottom: 4px;
+	left: 4px;
+	width: calc(50% - 4px);
+	line-height: 45px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 20px;
+	color: white;
+	background-color: #37474F;
+	border: 2px solid;
+	-webkit-transition: all 500ms;
+	-moz-transition: all 500ms;
+	-o-transition: all 500ms;
+	transition: all 500ms;
+}
+.toggle--on:after {
+	content: 'On';
+	border-radius: 50px 5px 5px 50px;
+	color: #66BB6A;
+}
+.toggle--off:after {
+	content: 'Off';
+	border-radius: 5px 50px 50px 5px;
+	color: #f44336;
+	-webkit-transform: translate(100%, 0);
+	-moz-transform: translate(100%, 0);
+	-o-transform: translate(100%, 0);
+	transform: translate(100%, 0);
+}
+.toggle--moving {background-color: #1c2429;}
+.toggle--moving:after {
+	color: transparent;
+	border-color: #435862;
+	background-color: #222c31;
+	-webkit-transition: color 0s, transform 500ms, border-radius 500ms, background-color 500ms;
+	-moz-transition: color 0s, transform 500ms, border-radius 500ms, background-color 500ms;
+	-o-transition: color 0s, transform 500ms, border-radius 500ms, background-color 500ms;
+	transition: color 0s, transform 500ms, border-radius 500ms, background-color 500ms;
+}
+
+
+/*----------*/

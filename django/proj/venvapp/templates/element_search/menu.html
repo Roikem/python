@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel='stylesheet' href="/static/element_search/css/reset.css">
+		<link rel='stylesheet' href="/static/element_search/css/index1.css">
+		<link rel="stylesheet" href="/static/element_search/window.css">
+		<link rel="stylesheet" href="/static/element_search/search.css">
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />-->
+		<style>
+			@media all and (max-width:500px){
+    			initScreen{
+					position: absolute;
+					left:20%;
+					top:20%;
+					width: 60%;
+					height:320px;
+					z-index: 1000;
+					background:#fff;
+					color:#000;
+					border-radius: 30px;
+				}
+			}
+		</style>
+		<script>
+			
+			var dpr = 1 / window.devicePixelRatio;
+			//alert(window.screen.availWidth);
+			//document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale='+dpr+',minimum-scale='+dpr+',maximum-scale='+dpr+'" />')
+			document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1 " />')
+			var fz = document.documentElement.clientWidth /9;
+			
+			document.getElementsByTagName('html')[0].style.fontSize = (fz*dpr) + 'px';
+			//console.log(fz,dpr);
+			
+			
+			window.onload = function(){
+				getType();
+			}
+			//判断设备是iPad还是iphone;
+			function getType(){  
+		        if(navigator.userAgent.indexOf("iPhone") != -1){  
+		            $(".initS").removeClass("initScreenIpad");
+		        }  
+		        if(navigator.userAgent.indexOf("iPad") != -1){ 
+		        	console.log($(".initScreen"));
+		            $(".initS").addClass("initScreenIpad");
+		            
+		        }
+		    }
+			
+			
+		</script>
+	</head>
+	<body>
+		<div id="wrap">			
+			<nav class="navbox">
+				<div class="navContent">
+					<div class="navList c-src" id="serch_button">
+						<i class="navIco-src navico"></i>
+						<span class="navText">
+							搜索栏按钮
+						</span>
+					</div>
+					<!--<span><i class="navIco-share navico"></i></span>-->
+				</div>					
+				<div class="pothook">
+				</div>
+			</nav>
+			<div id="element_search"></div>	
+			<div class="container">
+				<input type="text" placeholder="Search..." id="keybord_event">
+				<div class="search"></div>
+			</div>	
+			<!--这里是嵌套的模型-->
+			<div class="model-wrap">
+				<iframe id="iframe_id" name="iframe_id" src="3d/index.html" width="100%" height="100%"></iframe>
+			</div>
+			<!--<div class="tanmu">
+				<div class="tanmuContent">
+					<span class="headImg"></span>
+					这是一个弹幕
+					<div class="praiseBox">
+						<span class="t-praise t-praise1"></span>
+						<span class="t-numer">123</span>
+					</div>	
+				</div>		
+			</div>-->
+			<!--send start-->
+			<!-- <div class="send">
+				<div class="s_fiter"> -->
+					<!--<div class="s_con">-->
+						<!-- <input type="text" class="s_txt" maxlength="12" placeholder="发送弹幕，最多可写12字"/>
+						<div class="s_sub"></div> -->
+						<!--<input type="button" value="发送" class="s_sub"/>
+					<!--</div>
+				</div>
+			</div> -->
+		</div>
+		<!-- <audio src='http://jq22com.qiniudn.com/jq22m1.mp3' class="audio"></audio>
+		<div class="bz">
+			<div class="bzContent">
+				jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。
+			</div>	
+		</div> -->
+		<!-- <div class="initScreen initS">
+			<h3>功能介绍</h3>
+			<ol class="ollist">
+				<li><i></i>文字开关控制字幕</li>
+				<li><i></i>语音开关控制声音</li>
+				<li><i></i>弹幕开关控制弹幕显示</li>
+				<li><i></i>发弹幕开关可以发送弹幕</li>
+				<li><i></i>空中俯瞰切换外景俯瞰</li>
+			</ol>
+			<span class="tanClose"></span>
+		</div> -->
+		<script src="/static/element_search/jquery.min.js"></script>
+		<script src="/static/element_search/menu.js"></script>
+		<script src="/static/element_search/window.js"></script>
+		<!-- <script src='index.js'></script>	 -->
+	</body>
+</html>

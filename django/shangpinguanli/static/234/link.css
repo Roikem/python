@@ -1,0 +1,132 @@
+/*----表单----*/
+
+#login_frame {
+    width: 400px;
+    height: 500px;
+    padding: 23px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+  
+    background-color: rgba(98, 107, 107, 0.7);
+  
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  form p > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  p {
+      margin-bottom:25px;
+  }
+
+  #image_logo {
+    margin-top: 22px;
+    color:whitesmoke;
+  }
+  
+  .label_input {
+    font-size: 14px;
+    font-family: 宋体;
+  
+    width: 65px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+  
+    color: white;
+    background-color: rgb(151, 147, 150);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .text_field {
+    width: 278px;
+    height: 28px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0;
+  }
+  
+  .btn_login {
+    font-size: 14px;
+    font-family: 宋体;
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    background-color: rgb(43, 78, 87);
+    border-radius: 6px;
+    border: 0;
+    float: left;
+    cursor: pointer;
+    margin-right:15px;
+    margin-left: 10px;
+  }
+
+  .cancel{
+      background-color:rgb(161, 45, 45)
+  }
+  
+  #forget_pwd {
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    float: right;
+    top: 5px;
+  
+  }
+  
+  #forget_pwd:hover {
+    color: rgb(43, 78, 87);
+    text-decoration: underline;
+  }
+  
+  #login_control {
+    padding: 0 28px;
+  }
+  
+  img{
+    width:40px;
+    height:40px;
+  }
+  
+  #login{
+    z-index: 2;
+  }
+  
+  #login>*{
+    position:absolute;
+  }
+  
+  #login #login_frame{
+    animation-name: _login_frame;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.42, 0.54, 0.49, 1.74);
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes _login_frame{
+    from{
+      top:0px;
+      opacity:0;
+    }
+    to{
+      top:280px;
+      opacity: 1;
+    }
+  }
+
+  #form_print{
+    margin-left: 30px;
+  }
+  
+  /*-----------*/

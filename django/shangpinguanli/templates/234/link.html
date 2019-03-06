@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="/static/234/css/amazeui.min.css" />
+		<link rel="stylesheet" href="/static/234/css/admin.css" />
+		<link rel="stylesheet" href="/static/234/link.css" />
+		<script src="/static/234/js/jquery-1.11.3.min.js"></script>
+		<script src="/static/234/link1.js"></script>
+	</head>
+	<body>
+		<div class="admin-content-body">
+			<div class="am-cf am-padding am-padding-bottom-0">
+				<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">代理商管理</strong><small></small></div>
+			</div>
+
+			<hr>
+
+			<div class="am-g">
+				<div class="am-u-sm-12 am-u-md-6">
+					<div class="am-btn-toolbar">
+						<div class="am-btn-group am-btn-group-xs">
+							<button type="button" class="am-btn am-btn-default" id="add_form"><span class="am-icon-plus"></span> 新增</button>
+							<button type="button" class="am-btn am-btn-default" id="form_print"><span class="am-icon-plus"></span> 打印</button>
+						</div>
+					</div>
+				</div>
+				<div class="am-u-sm-12 am-u-md-3">
+
+				</div>
+				<div class="am-u-sm-12 am-u-md-3">
+					<div class="am-input-group am-input-group-sm">
+						<input type="text" class="am-form-field" placeholder="请输入商品名称">
+						<span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="button">搜索</button>
+          </span>
+					</div>
+				</div>
+			</div>
+			<div class="am-g">
+				<div class="am-u-sm-12">
+					<form class="am-form">
+						<table class="am-table am-table-striped am-table-hover table-main" id="table">
+							<thead>
+								<tr>
+									<th class="table-check"><input type="checkbox"></th>
+									<th class="table-title">商品名称</th>
+									<th class="table-title">代理商名称</th>
+									<th class="table-title">联系方式</th>
+									<th class="table-id">数量</th>
+									<th class="table-title">商品价值</th>
+									<th class="table-title">出库时间</th>
+									<th class="table-set">操作</th>
+								</tr>
+							</thead>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="login"></div>
+	</body>
+</html>
